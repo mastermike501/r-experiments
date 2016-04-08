@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# EnsurePackage(x) - Installs and loads a package if neccessary\nEnsurePackage <- function(x) {\n  x <- as.character(x);\n  if(!require(x, character.only = TRUE)) {\n    install.packages(pkgs = x, repos = \"http://cran.r-project.org\")\n    require(x, character.only = TRUE)\n  }\n}\n\n# PrepareTwitter() - Load packages for working with twitteR\nPrepareTwitter <- function() {\n  EnsurePackage(\"bitops\")\n  EnsurePackage(\"RCurl\")\n  EnsurePackage(\"RJSONIO\")\n  EnsurePackage(\"twitteR\")\n}",
+    "created" : 1456105411467.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2389215635",
+    "id" : "9F4CCB66",
+    "lastKnownWriteTime" : 1456130526,
+    "last_content_update" : 1456130526669,
+    "path" : "~/Desktop/twitter/EnsurePackage.R",
+    "project_path" : "EnsurePackage.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}
